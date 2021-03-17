@@ -29,7 +29,7 @@ function getButtonID(flashColor) {
 }
 //flash a button by buttonID
 function flashButtonByID(btnID) {
-  $(btnID).fadeOut(100).fadeIn(100);
+  $(btnID).fadeOut(200).fadeIn(200);
 }
 
 //play accouring Sound for each Button (from /sounds)
@@ -70,7 +70,7 @@ $(".btn").click(function() {
   if(areArraysEqual(gamePattern, userClickedPattern)) {
     level++;
     $("h1").html("Level " + level + " completed!");
-    setTimeout(function(){startLevelwithNumber(level);}, 1500);
+    setTimeout(function(){startLevelwithNumber(level);}, 2000);
   }
 });
 
@@ -109,7 +109,7 @@ function startLevelwithNumber(level) {
       flashButtonByID(colorid);
       gamePattern.push(color);
       console.log(gamePattern);
-    }, levelCounter * 500);
+    }, levelCounter * 1000);
   }
 }
 
